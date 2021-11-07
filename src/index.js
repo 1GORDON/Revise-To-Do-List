@@ -1,3 +1,4 @@
+/* eslint-disable */ 
 import './style.css'
 
 // Array data for todo-List
