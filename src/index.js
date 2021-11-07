@@ -21,8 +21,8 @@ let todoListData = [
 ];
 
 const createIndexes = () => {
-  for (let i = 0; i < todoListData.length; i + 1){
-    todoListData[i].index = i;
+  for (let idx = 0; idx < todoListData.length; idx + 1){
+    todoListData[idx].index = idx;
   }
 };
 
@@ -47,7 +47,7 @@ const addToDo = (input) => {
 const component = () => {
   const todoContainer = document.querySelector('.todo-list-container');
   let element = document.createElement('li');
-  element.className = 'list-item';
+  element.className = 'todo-item';
 
   // Heading 
   const heading = document.createElement('h2');
@@ -78,6 +78,12 @@ const component = () => {
   todoContainer.appendChild(element);
 
   addItem.addEventListener('keydown', (e) =>{
+    if (e.keycode === 13){
+      addToDo(addItem.value);
+    }
+  });
+
+  enterButton.addEventListener('click', () => {
     addToDo(addItem.value);
   });
 
@@ -95,7 +101,7 @@ const component = () => {
     const description = document.createElement('textarea');
     description.className = 'description';
     description.rows = 'auto';
-    description.value = todo.description.toLocaleLowerCase().charAt(0).toLocaleUpperCase();
+    description.value = todo.description.toLowerCase().charAt(0).toUpperCase();
     description.value += todo.description.slice(1);
     element.appendChild(description);
 
@@ -105,6 +111,9 @@ const component = () => {
     element.appendChild(taskButton);
     todoContainer.appendChild(element);
   });
+
+  // Clear completed button
+  element = document.createElement('li');
 
   const clearCompleted = document.createElement('button');
   clearCompleted.className = 'clear-completed';
