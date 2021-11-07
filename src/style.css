@@ -1,5 +1,5 @@
 body {
-  background-color: #f6f6f6;
+  background-color: rgb(243, 239, 239);
   margin: 0;
   padding: 0;
   width: 100%;
@@ -18,10 +18,9 @@ body {
   height: auto;
   padding: 20px 0 0 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 0.4rem;
+  background-color: white;
 }
 
 .todo-item {
@@ -86,7 +85,7 @@ body {
   height: 50px;
   color: #414141;
   border: none;
-  background: #f6f6f6;
+  background: #dddbdb;
 }
 
 .clear:hover i,
