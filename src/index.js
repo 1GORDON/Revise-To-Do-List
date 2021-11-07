@@ -1,4 +1,4 @@
-import './style.css'
+import './style.css';
 
 // Array data for todo-List
 
@@ -21,7 +21,7 @@ let todoListData = [
 ];
 
 const createIndexes = () => {
-  for (let idx = 0; idx < todoListData.length; idx + 1){
+  for (let idx = 0; idx < todoListData.length; idx + 1) {
     todoListData[idx].index = idx;
   }
 };
@@ -49,7 +49,7 @@ const component = () => {
   let element = document.createElement('li');
   element.className = 'todo-item';
 
-  // Heading 
+  // Heading
   const heading = document.createElement('h2');
   heading.className = 'heading';
   heading.textContent = 'Today\'s To Do';
@@ -77,8 +77,8 @@ const component = () => {
   element.appendChild = (enterButton);
   todoContainer.appendChild(element);
 
-  addItem.addEventListener('keydown', (e) =>{
-    if (e.keycode === 13){
+  addItem.addEventListener('keydown', (e) => {
+    if (e.keycode === 13) {
       addToDo(addItem.value);
     }
   });
@@ -124,7 +124,7 @@ const component = () => {
 
 const onPageLoad = () => {
   window.onload = () => {
-    if (localStorage.getItem('todo_list') !== null){
+    if (localStorage.getItem('todo_list') !== null) {
       todoListData = JSON.parse(localStorage.getItem('todo_list'));
       component();
     } else {
