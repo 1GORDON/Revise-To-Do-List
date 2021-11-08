@@ -10,7 +10,7 @@ In this project i acheived the following
 
 ## Live Demo
 
-- [Go Live](https://1gordon.github.io/To-Do-List/dist/)
+- [Go Live](https://1gordon.github.io/Revise-To-Do-List/dist/)
 
 ## Built With
 
